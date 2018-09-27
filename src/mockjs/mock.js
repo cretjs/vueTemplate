@@ -7,6 +7,7 @@ const produceNewsData = function() {
     let list = [];
     for (let i = 0; i < 5; i++) {
         let newArticleObject = {
+            id:i,
             title: Random.csentence(5, 30), //  Random.csentence( min, max )
             thumbnail_pic_s: Random.dataImage('300x250', 'mock的图片'), // Random.dataImage( size, text ) 生成一段随机的 Base64 图片编码
             author_name: Random.cname(), // Random.cname() 随机生成一个常见的中文姓名

@@ -41,7 +41,7 @@
         <div>
             <h1>list</h1>
             <ul>
-                <li v-for="item in list">
+                <li v-for="item in list"  :key="item.id">
                     {{item.title}}
                 </li>
             </ul>

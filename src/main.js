@@ -4,7 +4,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VeeValidate from 'vee-validate'
 
-import axios from './axios'
+import './axios'
 import router from './router'
 import store from './store'
 
