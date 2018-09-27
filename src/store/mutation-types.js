@@ -1,0 +1,5 @@
+export const UPDATE_LOADING_STATUS = 'UPDATE_LOADING_STATUS'
+export const UPDATE_LIST = 'UPDATE_LIST'
+export const UPDATE_COUNT = 'UPDATE_COUNT'
+
+
