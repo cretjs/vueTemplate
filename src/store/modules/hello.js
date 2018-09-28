@@ -25,6 +25,7 @@ const actions = {
         }
         const param = [
             state.count,
+            payload
         ]
 
         dispatch('updateLoading', true,{root:true})
@@ -36,8 +37,8 @@ const actions = {
             commit(types.UPDATE_LIST, list)
         })
     },
-    changeCount(context) {
-        context.commit(types.UPDATE_COUNT, 1)
+    changeCount(context,payload) {
+        context.commit(types.UPDATE_COUNT, payload)
     },
 }
 
@@ -48,7 +49,7 @@ const mutations = {
         state.list = list
     },
     [types.UPDATE_COUNT](state, count) {
-        state.count = count + 1
+        state.count += count
     }
 }
 

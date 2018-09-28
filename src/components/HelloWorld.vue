@@ -39,7 +39,7 @@
         <input v-validate="'required|email'" name="email" type="text">
         <span>{{ errors.first('email') }}</span>
         <div>
-            <h1>list</h1>
+            <h1 @click="addCount">list{{count}}</h1>
             <ul>
                 <li v-for="item in list"  :key="item.id">
                     {{item.title}}
@@ -67,6 +67,7 @@
         computed:{
             ...mapState({
                 list: state => state.hello.list,
+                count: state => state.hello.count,
             }),
             ...mapGetters('hello', {
                 hasMore: 'hasMore'
@@ -81,8 +82,12 @@
         },
         methods:{
             ...mapActions('hello', {
-                fetchList: 'fetchList'
+                fetchList: 'fetchList',
+                changeCount:'changeCount'
             }),
+            addCount(){
+                this.changeCount(10);
+            }
         }
     }
 </script>
