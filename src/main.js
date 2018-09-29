@@ -8,7 +8,10 @@ import './axios'
 import router from './router'
 import store from './store'
 
+import loadjs from 'loadjs'
+
 Vue.config.productionTip = false
+Vue.prototype.loadjs = loadjs
 
 Vue.use(ElementUI)
 Vue.use(VeeValidate)

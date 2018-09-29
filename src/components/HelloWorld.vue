@@ -76,6 +76,13 @@
         mounted() {
             store.dispatch('hello/changeCount', 1)
             this.fetchList()
+            if (!this.loadjs.isDefined('videoBox')) {
+                this.loadjs('//newbuz.360buyimg.com/video/4.6/videoBox.js', 'videoBox', {
+                    success: function() { /* foo.js & bar.js loaded */ console.log(1)},
+                    error: function() { /* at least one path didn't load */ },
+                    numRetries: 3
+                });
+            }
             // this.axios.get('/news/index').then(function (res) {
             //     console.log(res);
             // });
